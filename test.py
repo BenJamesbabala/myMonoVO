@@ -6,12 +6,12 @@ from visual_odometry import PinholeCamera, VisualOdometry
 
 cam = PinholeCamera(1241.0, 376.0, 718.8560, 718.8560, 607.1928, 185.2157)
 #vo = VisualOdometry(cam, '/home/xxx/datasets/KITTI_odometry_poses/00.txt')
-vo = VisualOdometry(cam, 'C:/Users/KJoshi/Downloads/Kitti/00.txt')
+vo = VisualOdometry(cam, 'C:/Users/KJoshi/Downloads/Kitti/00.txt') #Kitti Data
 
 traj = np.zeros((600,600,3), dtype=np.uint8)
 
 for img_id in range(4000):
-	img = cv2.imread('C:/Users/KJoshi/Downloads/Kitti/image_0/'+str(img_id).zfill(6)+'.png', 0)
+	img = cv2.imread('C:/Users/KJoshi/Downloads/Kitti/image_0/'+str(img_id).zfill(6)+'.png', 0) #Kitti Data
 
 	vo.update(img, img_id)
 
